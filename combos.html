@@ -2,52 +2,67 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#071b68">
-<title>Combos para emprendedores — Laboratorios Eco</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+<meta name="theme-color" content="#ffffff">
+<title>Combos para emprendedores | Laboratorios Eco</title>
 <style>
-:root{--navy:#071b68;--blue:#09aee8;--lime:#c9df27;--bg:#f5f8fc;--ink:#15234b;--muted:#667085;--line:#e6ebf2}
+:root{--navy:#101c63;--blue:#13b4d2;--muted:#667085}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:13px 16px;display:flex;align-items:center;gap:12px}
-.back{color:var(--navy);text-decoration:none;font-weight:700;font-size:14px}
-.title{flex:1;text-align:center;color:var(--navy);font-size:16px;font-weight:800;margin-right:54px}
-main{max-width:760px;margin:0 auto;padding:18px 12px 38px}
-.intro{text-align:center;padding:8px 8px 18px}
-.intro h1{font-size:25px;line-height:1.15;color:var(--navy);margin:0 0 8px}
-.intro p{font-size:14px;line-height:1.45;color:var(--muted);margin:0}
-.pages{display:grid;gap:14px}
-.page{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 4px 16px rgba(7,27,104,.08)}
-.footer{text-align:center;padding:22px 10px 8px;color:var(--muted);font-size:12px}
-.cta{display:inline-block;margin-top:14px;background:var(--navy);color:#fff;text-decoration:none;padding:11px 16px;border-radius:12px;font-weight:700}
-@media(max-width:480px){main{padding-left:7px;padding-right:7px}.pages{gap:9px}.page{border-radius:8px}.title{font-size:15px;margin-right:42px}}
+body{margin:0;background:#f4f6f9;color:#172033;font-family:Arial,Helvetica,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #e4e7ec;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.back{color:var(--navy);text-decoration:none;font-weight:700;white-space:nowrap}
+.brand{font-weight:700;color:var(--navy);font-size:15px}
+main{max-width:920px;margin:0 auto;padding:18px 10px 36px}
+h1{font-size:22px;text-align:center;color:var(--navy);margin:8px 0 6px}
+.sub{text-align:center;color:var(--muted);font-size:14px;margin:0 0 16px}
+.tip{text-align:center;background:#eafaff;color:#14536a;border-radius:10px;padding:10px 12px;font-size:13px;margin:0 auto 16px;max-width:620px}
+.page{display:block;width:100%;height:auto;margin:0 auto 12px;background:white;box-shadow:0 2px 10px #10182812;cursor:zoom-in}
+#zoom{display:none;position:fixed;inset:0;background:#101828f2;z-index:10;overflow:auto;touch-action:pan-x pan-y pinch-zoom}
+#zoom.open{display:block}
+#zoom img{display:block;width:100%;height:auto;max-width:none;transform-origin:top center;margin:56px auto 20px}
+.controls{position:fixed;z-index:12;top:10px;right:12px;display:flex;gap:8px}
+.controls button{border:0;border-radius:8px;padding:9px 13px;background:#fff;color:#101c63;font-size:18px;font-weight:bold}
+#close{position:fixed;top:10px;left:12px;z-index:12;border:0;border-radius:8px;padding:10px 13px;background:#fff;color:#101c63;font-weight:bold}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:12px}
 </style>
 </head>
 <body>
-<header>
-<a class="back" href="index.html">← Volver</a>
-<div class="title">Laboratorios Eco</div>
-</header>
+<header><a class="back" href="index.html">← Volver</a><span class="brand">Laboratorios Eco</span></header>
 <main>
-<section class="intro">
 <h1>Combos para emprendedores</h1>
-<p>Deslizá hacia abajo para ver todas las opciones. No necesitás instalar ninguna aplicación.</p>
-</section>
-<section class="pages">
-<img class="page" src="pages/page-01.webp" alt="Combo para emprendedores — página 1" loading="eager">
-<img class="page" src="pages/page-02.webp" alt="Combo para emprendedores — página 2" loading="lazy">
-<img class="page" src="pages/page-03.webp" alt="Combo para emprendedores — página 3" loading="lazy">
-<img class="page" src="pages/page-04.webp" alt="Combo para emprendedores — página 4" loading="lazy">
-<img class="page" src="pages/page-05.webp" alt="Combo para emprendedores — página 5" loading="lazy">
-<img class="page" src="pages/page-06.webp" alt="Combo para emprendedores — página 6" loading="lazy">
-<img class="page" src="pages/page-07.webp" alt="Combo para emprendedores — página 7" loading="lazy">
-<img class="page" src="pages/page-08.webp" alt="Combo para emprendedores — página 8" loading="lazy">
-<img class="page" src="pages/page-09.webp" alt="Combo para emprendedores — página 9" loading="lazy">
-<img class="page" src="pages/page-10.webp" alt="Combo para emprendedores — página 10" loading="lazy">
-<img class="page" src="pages/page-11.webp" alt="Combo para emprendedores — página 11" loading="lazy">
-</section>
-<div class="footer">Laboratorios Eco · Información comercial<br><a class="cta" href="index.html">Volver al catálogo</a></div>
+<p class="sub">Combos concentrados · Noviembre 2026</p>
+<p class="tip">Tocá cualquier página para ampliarla. En el visor podés usar dos dedos para hacer zoom.</p>
+      <img class="page" src="combos/pagina-01.webp" alt="Combos para emprendedores, página 1" loading="eager">
+      <img class="page" src="combos/pagina-02.webp" alt="Combos para emprendedores, página 2" loading="lazy">
+      <img class="page" src="combos/pagina-03.webp" alt="Combos para emprendedores, página 3" loading="lazy">
+      <img class="page" src="combos/pagina-04.webp" alt="Combos para emprendedores, página 4" loading="lazy">
+      <img class="page" src="combos/pagina-05.webp" alt="Combos para emprendedores, página 5" loading="lazy">
+      <img class="page" src="combos/pagina-06.webp" alt="Combos para emprendedores, página 6" loading="lazy">
+      <img class="page" src="combos/pagina-07.webp" alt="Combos para emprendedores, página 7" loading="lazy">
+      <img class="page" src="combos/pagina-08.webp" alt="Combos para emprendedores, página 8" loading="lazy">
+      <img class="page" src="combos/pagina-09.webp" alt="Combos para emprendedores, página 9" loading="lazy">
+      <img class="page" src="combos/pagina-10.webp" alt="Combos para emprendedores, página 10" loading="lazy">
+      <img class="page" src="combos/pagina-11.webp" alt="Combos para emprendedores, página 11" loading="lazy">
 </main>
+<footer>Laboratorios Eco · Información comercial</footer>
+<div id="zoom" aria-label="Vista ampliada">
+<button id="close" type="button">✕ Cerrar</button>
+<div class="controls"><button id="minus" type="button">−</button><button id="plus" type="button">+</button><button id="reset" type="button">↺</button></div>
+<img id="zoomImage" alt="Página ampliada">
+</div>
+<script>
+const overlay=document.getElementById('zoom'), zoomImage=document.getElementById('zoomImage');
+let scale=1;
+function showZoom(src,alt){zoomImage.src=src;zoomImage.alt=alt;scale=1;applyScale();overlay.classList.add('open');document.body.style.overflow='hidden';}
+function applyScale(){zoomImage.style.width=(100*scale)+'%';}
+function closeZoom(){overlay.classList.remove('open');document.body.style.overflow='';}
+document.querySelectorAll('.page').forEach(img=>img.addEventListener('click',()=>showZoom(img.src,img.alt)));
+document.getElementById('close').addEventListener('click',closeZoom);
+document.getElementById('plus').addEventListener('click',()=>{scale=Math.min(3,scale+0.25);applyScale();});
+document.getElementById('minus').addEventListener('click',()=>{scale=Math.max(0.75,scale-0.25);applyScale();});
+document.getElementById('reset').addEventListener('click',()=>{scale=1;applyScale();overlay.scrollTo(0,0);});
+overlay.addEventListener('click',e=>{if(e.target===overlay)closeZoom();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeZoom();});
+</script>
 </body>
 </html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+<meta name="theme-color" content="#ffffff">
+<title>Productos de góndola | Laboratorios Eco</title>
+<style>
+:root{--navy:#101c63;--blue:#13b4d2;--muted:#667085}
+*{box-sizing:border-box}
+body{margin:0;background:#f4f6f9;color:#172033;font-family:Arial,Helvetica,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #e4e7ec;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.back{color:var(--navy);text-decoration:none;font-weight:700;white-space:nowrap}
+.brand{font-weight:700;color:var(--navy);font-size:15px}
+main{max-width:920px;margin:0 auto;padding:18px 10px 36px}
+h1{font-size:22px;text-align:center;color:var(--navy);margin:8px 0 6px}
+.sub{text-align:center;color:var(--muted);font-size:14px;margin:0 0 16px}
+.tip{text-align:center;background:#eafaff;color:#14536a;border-radius:10px;padding:10px 12px;font-size:13px;margin:0 auto 16px;max-width:620px}
+.page{display:block;width:100%;height:auto;margin:0 auto 12px;background:white;box-shadow:0 2px 10px #10182812;cursor:zoom-in}
+#zoom{display:none;position:fixed;inset:0;background:#101828f2;z-index:10;overflow:auto;touch-action:pan-x pan-y pinch-zoom}
+#zoom.open{display:block}
+#zoom img{display:block;width:100%;height:auto;max-width:none;transform-origin:top center;margin:56px auto 20px}
+.controls{position:fixed;z-index:12;top:10px;right:12px;display:flex;gap:8px}
+.controls button{border:0;border-radius:8px;padding:9px 13px;background:#fff;color:#101c63;font-size:18px;font-weight:bold}
+#close{position:fixed;top:10px;left:12px;z-index:12;border:0;border-radius:8px;padding:10px 13px;background:#fff;color:#101c63;font-weight:bold}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:12px}
+</style>
+</head>
+<body>
+<header><a class="back" href="index.html">← Volver</a><span class="brand">Laboratorios Eco</span></header>
+<main>
+<h1>Productos de góndola</h1>
+<p class="sub">Catálogo de productos de góndola</p>
+<p class="tip">Tocá cualquier página para ampliarla. En el visor podés usar dos dedos para hacer zoom.</p>
+      <img class="page" src="gondola/pagina-01.webp" alt="Productos de góndola, página 1" loading="eager">
+      <img class="page" src="gondola/pagina-02.webp" alt="Productos de góndola, página 2" loading="lazy">
+      <img class="page" src="gondola/pagina-03.webp" alt="Productos de góndola, página 3" loading="lazy">
+      <img class="page" src="gondola/pagina-04.webp" alt="Productos de góndola, página 4" loading="lazy">
+</main>
+<footer>Laboratorios Eco · Información comercial</footer>
+<div id="zoom" aria-label="Vista ampliada">
+<button id="close" type="button">✕ Cerrar</button>
+<div class="controls"><button id="minus" type="button">−</button><button id="plus" type="button">+</button><button id="reset" type="button">↺</button></div>
+<img id="zoomImage" alt="Página ampliada">
+</div>
+<script>
+const overlay=document.getElementById('zoom'), zoomImage=document.getElementById('zoomImage');
+let scale=1;
+function showZoom(src,alt){zoomImage.src=src;zoomImage.alt=alt;scale=1;applyScale();overlay.classList.add('open');document.body.style.overflow='hidden';}
+function applyScale(){zoomImage.style.width=(100*scale)+'%';}
+function closeZoom(){overlay.classList.remove('open');document.body.style.overflow='';}
+document.querySelectorAll('.page').forEach(img=>img.addEventListener('click',()=>showZoom(img.src,img.alt)));
+document.getElementById('close').addEventListener('click',closeZoom);
+document.getElementById('plus').addEventListener('click',()=>{scale=Math.min(3,scale+0.25);applyScale();});
+document.getElementById('minus').addEventListener('click',()=>{scale=Math.max(0.75,scale-0.25);applyScale();});
+document.getElementById('reset').addEventListener('click',()=>{scale=1;applyScale();overlay.scrollTo(0,0);});
+overlay.addEventListener('click',e=>{if(e.target===overlay)closeZoom();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeZoom();});
+</script>
+</body>
+</html>
