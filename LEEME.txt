@@ -1,0 +1,15 @@
+ACTUALIZACIÓN DE LA PÁGINA PRINCIPAL — CARRUSEL DE PROMOCIONES
+
+Incluye:
+- index.html actualizado con un carrusel automático de dos promociones.
+- promos/promo-aromas.webp
+- promos/promo-jabon-green.webp
+
+INSTALACIÓN:
+1. Descomprimir el ZIP.
+2. En GitHub, reemplazar el index.html actual por este nuevo index.html.
+3. Subir la carpeta promos completa a la raíz del repositorio.
+4. No reemplazar ni borrar logo.webp, precios.html, combos.html, gondola.html ni sus carpetas.
+5. Hacer Commit changes.
+
+El carrusel cambia cada 5 segundos. También tiene flechas, indicadores y permite deslizar en celulares. Para cambiar las promociones en el futuro, reemplazar las imágenes dentro de promos conservando exactamente sus nombres.
